@@ -1,0 +1,5 @@
+module LibraryX [extern_c] {
+    header "libraryx.h"
+    link "libraryx"
+    export *
+}
