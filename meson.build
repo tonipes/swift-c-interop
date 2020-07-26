@@ -3,16 +3,10 @@ project('swift_c_interop', ['c', 'cpp', 'swift'],
   default_options : ['warning_level=3']
 )
 
-# add_project_arguments('-embed-bitcode', language : 'swift')
-
-src = [
-  'source/main.swift',
-]
-
 subdir('libraryx')
 
 exe = executable(
-  'swift_c_interop', 'source/main.swift',
+  'swift_c_interop', ['source/main.swift', 'source/other.swift'],
   dependencies: [libraryx_dep],
 )
 
